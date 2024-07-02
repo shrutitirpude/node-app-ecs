@@ -11,7 +11,7 @@ phases:
   post_build:
     commands:
       - docker push 391122274211.dkr.ecr.us-east-1.amazonaws.com/node-app-ecr:latest
-      - printf '[{"name":"node-app-task-definition:1","imageUri":"%s"}]' 391122274211.dkr.ecr.us-east-1.amazonaws.com/node-app-ecr:latest > imagedefinitions.json
+      - printf '[{"name":"node-app-container","imageUri":"%s"}]' 391122274211.dkr.ecr.us-east-1.amazonaws.com/node-app-ecr:latest > imagedefinitions.json
       - cat imagedefinitions.json 
   
 artifacts:
