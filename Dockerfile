@@ -1,4 +1,5 @@
-FROM  --platform=linux/amd64 node:10-alpine
+# FROM  --platform=linux/amd64 node:10-alpine
+FROM --platform=linux/amd64 public.ecr.aws/p4o1l8g0/node-image
 
 RUN mkdir -p /home/node/app/node_modules && chown -R node:node /home/node/app
 
