@@ -15,7 +15,7 @@ stages:
 - stage: MyBuild
   displayName: Build image from docker file
   jobs:
-  - job: My Build
+  - job: MyBuild
     displayName: display name Build
     pool:
       vmImage: ubuntu-latest
