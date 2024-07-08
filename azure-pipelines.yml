@@ -28,7 +28,7 @@ stages:
         tags: |
           $(tag)
 
- - stage: MyQA
+- stage: MyQA
   displayName: MyQA
   jobs:
   - job: MyBuild
