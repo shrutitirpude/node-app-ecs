@@ -12,8 +12,8 @@ variables:
   tag: '$(Build.BuildId)'
 
 stages:
-- stage: Build
-  displayName: Build image
+- stage: My Build
+  displayName: Build image from docker file
   jobs:
   - job: Build
     displayName: Build
