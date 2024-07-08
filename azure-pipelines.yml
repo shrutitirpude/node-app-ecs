@@ -27,6 +27,12 @@ stages:
         dockerfile: '$(Build.SourcesDirectory)/Dockerfile'
         tags: |
           $(tag)
+    - task: PublishPipelineArtifact@1
+      displayName: Publish
+      inputs:
+        targetPath: '$(Pipeline.Workspace)'
+        publishLocation: 'pipeline'
+        artifact: 'drop'   
 
 - stage: Deploy
   displayName: Deploy
