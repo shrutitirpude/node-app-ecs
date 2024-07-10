@@ -20,7 +20,8 @@ stages:
     pool:
       vmImage: ubuntu-latest
     steps:
-   - script: aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 391122274211.dkr.ecr.us-east-1.amazonaws.com
+   #- script: aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 391122274211.dkr.ecr.us-east-1.amazonaws.com
+   - script: aws ecr get-login docker login –u AWS –p password –e none 391122274211.dkr.ecr.us-east-1.amazonaws.com
       displayName: 'Login to AWS'   
       env:
         AWS_ACCESS_KEY_ID: $(AWS_ACCESS_KEY_ID)
